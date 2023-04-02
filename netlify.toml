@@ -1,0 +1,12 @@
+[build]
+publish = "public"
+
+[functions]
+directory = "functions/"
+
+[template.environment]
+INVESTEC_CLIENT_ID = "Investec Client ID"
+INVESTEC_SECRET = "Investec Secret"
+INVESTEC_API_KEY = "Investec API Key"
+TRANSACTION_ACCOUNT_ID = "Transaction Account ID"
+SAVINGS_ACCOUNT_ID = "Savings Account ID"

@@ -25,18 +25,29 @@ based on the following parameters
 ![Diagram](docs/diagram.png "Diagram")
 
 
-# Getting started
-1. First step is to get Investec to enable programmable banking access.
-2. Once you have that, you need to create a `.env` file in the root of the project. 
-   The contents of the file should be as follows:
-   ```
-   INVESTEC_USERNAME=your_investec_username
-   INVESTEC_PASSWORD=your_investec_password
-   INVESTEC_ACCOUNT_NUMBER=your_investec_account_number
-   INVESTEC_SAVINGS_ACCOUNT_NUMBER=your_investec_savings_account_number
-   INVESTEC_LOAN_ACCOUNT_NUMBER=your_investec_loan_account_number
-   ```
-3. Click the button below
+# Prerequisites
+1. Make sure that you have programmable banking access enabled with Investec. 
+   1. This will give you your Client ID, Secret & API Key.
+2. Get your desired Transactional Account ID & Savings Account ID
 
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/netlify/netlify-statuskit)
 
+# Deploy
+To get this running on a serverless function at an 30 minute interval, simply click the button below.
+(You will need to have a GitHub account & Netlify account). The half-hourly process for a full month
+should still be well within Netlify's free tier.
+
+
+[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/nicholasgcoles/investec-money-mover)
+
+
+# Dev locally
+1. Clone the repo
+2. `npm install`
+3. Once you have that, you need to create a `.env` file in the root of the project, with the following:
+```
+INVESTEC_CLIENT_ID=XXX
+INVESTEC_SECRET=XXX
+INVESTEC_API_KEY=XXX
+TRANSACTION_ACCOUNT_ID=XXX
+SAVINGS_ACCOUNT_ID=XXX
+```
