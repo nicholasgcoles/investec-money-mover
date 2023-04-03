@@ -9,7 +9,6 @@ import { Client, Account } from 'investec-api';
 
 // write a function to get all the necessary environment variables or throw error if missing.
 const getAllEnvVars = () => {
-  console.log(process.env);
   if (
     !process.env.INVESTEC_CLIENT_ID ||
     !process.env.INVESTEC_SECRET ||
