@@ -27,7 +27,8 @@ based on the following parameters
 
 # Prerequisites
 1. Make sure that you have programmable banking access enabled with Investec. 
-   1. This will give you your Client ID, Secret & API Key.
+   1. Go to the following [link](https://login.secure.investec.com/wpaas/io-wpaas/programmable-banking/oauth-connected-apps) and add an Oauth app.
+   2. This will give you your Client ID, Secret & API Key.
 2. Get your desired Transactional Account ID & Savings Account ID
 
 
