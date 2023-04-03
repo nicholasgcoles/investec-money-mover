@@ -11,7 +11,7 @@ It is probably a good idea to have some independent mechanism for understand you
 
 
 # How it works
-The underlying process is a script that runs every 30 minutes. The script will make sure
+The underlying process is a script that runs every hour. The script will make sure
 that money is sitting in the correct accounts. The logic is as follows:
 
 1. Income goes into your transactional account
@@ -29,11 +29,11 @@ based on the following parameters
 1. Make sure that you have programmable banking access enabled with Investec. 
    1. Go to the following [link](https://login.secure.investec.com/wpaas/io-wpaas/programmable-banking/oauth-connected-apps) and add an Oauth app.
    2. This will give you your Client ID, Secret & API Key.
-2. Get your desired Transactional Account ID & Savings Account ID
+2. Get your desired Transactional Account number & Savings Account number
 
 
 # Deploy
-To get this running on a serverless function at an 30 minute interval, simply click the button below.
+To get this running on a serverless function at an hourly interval, simply click the button below.
 (You will need to have a GitHub account & Netlify account). The half-hourly process for a full month
 should still be well within Netlify's free tier.
 
@@ -49,6 +49,9 @@ should still be well within Netlify's free tier.
 INVESTEC_CLIENT_ID=XXX
 INVESTEC_SECRET=XXX
 INVESTEC_API_KEY=XXX
-TRANSACTION_ACCOUNT_ID=XXX
-SAVINGS_ACCOUNT_ID=XXX
+TRANSACTIONAL_ACCOUNT_NUMBER=XXX
+SAVINGS_ACCOUNT_NUMBER=XXX
+FACILITY=XXX
+MIN_BALANCE=0
 ```
+4. `npm run moneyMover`
