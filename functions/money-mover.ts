@@ -132,3 +132,7 @@ const myHandler: Handler = async (
 const handler = schedule('@hourly', myHandler);
 
 export { handler };
+
+if (process.env.LOCAL_DEV === 'true') {
+  transferManager().then();
+}
